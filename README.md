@@ -1,10 +1,14 @@
-## jumpo
+## jumpo (ju)
 
 Jump list for your shell. It is a small binary that can be used to quickly move
 between directories for very fast workflow 🚀. It works on a very simple concept
 to use simple persistent key-value pair (JSON file on disk 😛) and prints the
 valid `cd` command on the `stdout` which will be later consumed by the bash
 function to `cd` into that directory.
+
+## Demo
+
+<img src="./assets/output.gif">
 
 ## Usage
 
