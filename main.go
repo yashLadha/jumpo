@@ -55,17 +55,17 @@ func main() {
 	}
 
 	switch arg[0] {
-	case "-add":
+	case "-add", "-a":
 		if len(arg) < 2 {
 			log.Fatalf("Require short-hand as second arg\n")
 		}
 		addJumpPoint(arg[1])
-	case "-remove":
+	case "-remove", "-r":
 		if len(arg) < 2 {
 			log.Fatalf("Require short-hand as second arg\n")
 		}
 		removeJumpPoint(arg[1])
-	case "-list":
+	case "-list", "-l":
 		listJumpPoint()
 	default:
 		jumpPoint(arg[0])

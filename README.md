@@ -39,12 +39,15 @@ Available options are as follows:
 
 ```bash
 # To add current directory to jump list with prefix
+# Or use the short-hand command -a
 ju -add r1
 
 # List the jumplist
+# Or use the short-hand command -l
 ju -list
 
 # Remove prefix from jumplist
+# Or use the short-hand command -r
 ju -remove r1
 
 # Move to the jump list
