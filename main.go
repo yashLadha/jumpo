@@ -47,12 +47,7 @@ func main() {
 		os.Exit(0)
 	}
 
-	if cacheDir := GetCacheDir(); cacheDir != "" {
-		cacheLocation = cacheDir
-		if err := createIfNotExists(cacheDir); err == nil {
-			log.Printf("Cache directory created successfully\n")
-		}
-	}
+	updateCacheLocation()
 
 	switch arg[0] {
 	case "-add", "-a":
@@ -69,5 +64,14 @@ func main() {
 		listJumpPoint()
 	default:
 		jumpPoint(arg[0])
+	}
+}
+
+func updateCacheLocation() {
+	if cacheDir := GetCacheDir(); cacheDir != "" {
+		cacheLocation = cacheDir
+		if err := createIfNotExists(cacheDir); err == nil {
+			log.Printf("Cache directory created successfully\n")
+		}
 	}
 }
