@@ -1,4 +1,4 @@
-## jumpo (ju)
+## jumpo (j)
 
 Jump list for your shell. It is a small binary that can be used to quickly move
 between directories for very fast workflow 🚀. It works on a very simple concept
@@ -14,7 +14,7 @@ function to `cd` into that directory.
 
 Firstly put this function in your shell config (`.bashrc` or `.zshrc`)
 ```bash
-ju() {
+j() {
     `jumpo-mac $*`
 }
 ```
@@ -23,16 +23,16 @@ Then after sourcing the shell config again or restarting the terminal. You will
 be able to see the function.
 
 ```bash
-functions | grep 'ju ()'
+functions | grep 'j ()'
 ```
 
 ```bash
 # Last argument is the prefix string, which will be used for jumping
 # Will use the directoy of execution as the location of jump.
-ju -add no
+j -add no
 
 # To move that directory
-ju no
+j no
 ```
 
 Available options are as follows:
@@ -40,18 +40,18 @@ Available options are as follows:
 ```bash
 # To add current directory to jump list with prefix
 # Or use the short-hand command -a
-ju -add r1
+j -add r1
 
 # List the jumplist
 # Or use the short-hand command -l
-ju -list
+j -list
 
 # Remove prefix from jumplist
 # Or use the short-hand command -r
-ju -remove r1
+j -remove r1
 
 # Move to the jump list
-ju r1
+j r1
 ```
 
 ## Building
